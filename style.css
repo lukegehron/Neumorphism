@@ -1,0 +1,227 @@
+body,
+html {
+    background-color: #EBECF0;
+}
+
+body,
+p,
+input,
+select,
+textarea,
+button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+}
+
+div,
+p {
+    color: #BABECC;
+    text-shadow: 1px 1px 1px #FFF;
+}
+
+
+form {
+    padding: 16px;
+    width: 360px;
+    margin: 0 auto;
+}
+
+.segment {
+    text-align: center;
+}
+
+button,
+input {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 26px;
+    padding: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #FFF;
+}
+
+label {
+    display: block;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.textInputs {
+    margin-bottom: 16px;
+}
+
+input {
+    margin-right: 8px;
+
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input:focus {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+
+input[type="submit"] {
+    color: #61677C;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+input[type="submit"]:hover {
+    box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+}
+
+input[type="submit"]:active {
+    box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+
+ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 26px;
+    padding: 20px;
+    background: #EBECF0;
+    box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+}
+
+
+li {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    margin: 15px;
+}
+
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+input:checked~.icon-box {
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1),
+        inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: #EBECF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+        3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.fa {
+    font-size: 30px;
+    color: #61677C;
+}
+
+.radiogroup {
+    padding: 48px 64px;
+    border-radius: 26px;
+    background: #EBECF0;
+    box-shadow:
+        inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+}
+
+
+.wrapper {
+    margin: 8px 0;
+}
+
+.state {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: #61677C;
+}
+
+.text {
+    margin-left: 16px;
+    opacity: .6;
+    transition: opacity .2s linear, transform .2s ease-out;
+}
+
+.indicator {
+    position: relative;
+    border-radius: 26px;
+    height: 30px;
+    width: 30px;
+    box-shadow:
+        -8px -4px 8px 0px #ffffff,
+        8px 4px 12px 0px #BABECC;
+    overflow: hidden;
+}
+
+.indicator::before,
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+}
+
+.indicator::before {
+    box-shadow:
+        -4px -2px 4px 0px #BABECC,
+        4px 2px 8px 0px #fff;
+}
+
+.indicator::after {
+    background-color: #EBECF0;
+    box-shadow:
+        -4px -2px 4px 0px #fff,
+        4px 2px 8px 0px #BABECC;
+    transform: scale3d(1, 1, 1);
+    transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+}
+
+.state:checked~.label .indicator::after {
+    transform: scale3d(.975, .975, 1) translate3d(0, 10%, 0);
+    opacity: 0;
+}
+
+.state:focus~.label .text {
+    transform: translate3d(8px, 0, 0);
+    opacity: 1;
+}
+
+.label:hover .text {
+    opacity: 1;
+}
+
+.red {
+    display: inline;
+    color: rgb(180, 99, 90);
+}

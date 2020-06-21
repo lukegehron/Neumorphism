@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="validate.js"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <form action="http://bucs601.com/submit.php" onsubmit="return validate()" method="POST">
+        <div class="segment">
+            <h1>Welcome to the 601 Form HW</h1>
+        </div>
+        <div>
+            <p class=red id="firstNameFailure"></p>
+            <label>
+                <input type="text" name="firstName" id="firstName" class="textInputs" placeholder="First Name" />
+            </label>
+            <p class=red id="lastNameFailure"></p>
+            <label>
+                <input type="text" name="lastName" id="lastName" class="textInputs" placeholder="Last Name" />
+            </label>
+            <p class=red id="facilitatorFailure"></p>
+            <label>
+                <input type="text" name="facilitator" id="facilitator" class="textInputs" placeholder="Facilitator" />
+            </label>
+        </div>
+
+
+        <div class="radiogroup">
+            <div class="wrapper">
+                <input class="state" type="radio" name="app" id="a" value="a">
+                <label class="label" for="a">
+                    <span class="indicator"></span>
+                    <span class="text">a) opt1</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state" type="radio" name="app" id="b" value="b">
+                <label class="label" for="b">
+                    <span class="indicator"></span>
+                    <span class="text">b) opt2</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state" type="radio" name="app" id="c" value="c">
+                <label class="label" for="c">
+                    <span class="indicator"></span>
+                    <span class="text">c) opt3</span>
+                </label>
+            </div>
+            <div class="wrapper">
+                <input class="state" type="radio" name="app" id="d" value="d">
+                <label class="label" for="d">
+                    <span class="indicator"></span>
+                    <span class="text">d) opt4</span>
+                </label>
+            </div>
+        </div>
+
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" name="a">
+                    <span class="icon-box">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="b">
+                    <span class="icon-box">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="c">
+                    <span class="icon-box">
+                        <i class="fa fa-plane" aria-hidden="true"></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="d">
+                    <span class="icon-box">
+                        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="e">
+                    <span class="icon-box">
+                        <i class="fa fa-battery-full" aria-hidden="true"></i>
+                    </span>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" name="f">
+                    <span class="icon-box">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                    </span>
+                </label>
+            </li>
+        </ul>
+
+
+        <p class=red id="sumbitFailure"></p>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+
+</html>
